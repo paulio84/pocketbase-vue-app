@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { useTheme } from "@/composables/useTheme"
+import { SunIcon, MoonIcon } from "@heroicons/vue/24/outline"
+import { useTheme } from "./composables/useTheme"
 
-const { theme, toggleTheme } = useTheme()
+const { toggleTheme, isDarkMode } = useTheme()
 </script>
 
 <template>
@@ -18,8 +19,8 @@ const { theme, toggleTheme } = useTheme()
           class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
           @click="toggleTheme"
         >
-          <span v-if="theme === 'light'">🌙</span>
-          <span v-else>☀️</span>
+          <SunIcon v-if="isDarkMode()" class="size-6 text-yellow-500" />
+          <MoonIcon v-else class="size-6 text-gray-700" />
         </button>
       </div>
 

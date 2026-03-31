@@ -26,6 +26,9 @@ applyTheme(initialTheme)
 const theme = ref<Theme>(initialTheme)
 
 export function useTheme() {
+  // Check if the theme is dark mode
+  const isDarkMode = () => theme.value === "dark"
+
   // Toggle between light and dark
   const toggleTheme = () => {
     theme.value = theme.value === "light" ? "dark" : "light"
@@ -40,5 +43,6 @@ export function useTheme() {
   return {
     theme,
     toggleTheme,
+    isDarkMode,
   }
 }
