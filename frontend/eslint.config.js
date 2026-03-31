@@ -13,14 +13,14 @@ export default [
     files: ["*.vue", "**/*.vue", "*.ts", "**/*.ts"],
     languageOptions: {
       parserOptions: {
-        parser: tseslint.parser
-      }
+        parser: tseslint.parser,
+      },
     },
     plugins: {
-      prettier
+      prettier,
     },
     rules: {
-      "prettier/prettier": "error"
-    }
-  }
+      "prettier/prettier": "error",
+    },
+  },
 ]

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { SunIcon, MoonIcon } from "@heroicons/vue/24/outline"
-import { useTheme } from "./composables/useTheme"
+import { useTheme } from "@/composables/useTheme"
 
 const { toggleTheme, isDarkMode } = useTheme()
 </script>
